@@ -1,1 +1,5 @@
 node_modules
+
+# macOS resource fork files
+._*
+.DS_Store
