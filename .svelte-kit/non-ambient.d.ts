@@ -27,17 +27,15 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/api" | "/api/pay";
+		RouteId(): "/";
 		RouteParams(): {
 			
 		};
 		LayoutParams(): {
-			"/": Record<string, never>;
-			"/api": Record<string, never>;
-			"/api/pay": Record<string, never>
+			"/": Record<string, never>
 		};
-		Pathname(): "/" | "/api" | "/api/" | "/api/pay" | "/api/pay/";
+		Pathname(): "/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/._assets" | "/._hero-bg.png" | "/._railer-logo.png" | "/._robots.txt" | "/assets/._favicon.svg" | "/assets/favicon.svg" | "/hero-bg.png" | "/railer-logo.png" | "/robots.txt" | string & {};
+		Asset(): "/hero-bg.png" | "/railer-logo.png" | "/robots.txt" | string & {};
 	}
 }
