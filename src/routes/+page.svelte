@@ -4,7 +4,7 @@
 		subtitle: "A Fine Arts Booster Club Community Event",
 		location: "Fischer Field Band Shell",
 		address: "720 W 1st St, Newton, Kansas, United States",
-		googleMaps: "https://maps.app.goo.gl/W5wp9x9Ed7xUV29i7", // Example link
+		googleMaps: "https://maps.app.goo.gl/k7hacGpJkBvPQAuc8", // Example link
 		date: "May 30",
 		time: "Gates 6:15 | Show 7:00 – 9:00 PM",
 		artists: [
