@@ -510,6 +510,7 @@
 								src={sponsor.logo}
 								alt={sponsor.alt}
 								class="sponsor-logo"
+								loading="lazy"
 							/>
 						</div>
 						<h3 class="sponsor-name">{sponsor.name}</h3>
