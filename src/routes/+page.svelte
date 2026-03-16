@@ -4,8 +4,8 @@
 		subtitle: "A Fine Arts Booster Club Community Event",
 		location: "Fischer Field Band Shell",
 		address: "720 W 1st St, Newton, Kansas, United States",
-		googleMaps: "https://maps.app.goo.gl/W5wp9x9Ed7xUV29i7", // Example link
-		date: "May 30",
+		googleMaps: "https://maps.app.goo.gl/W5wp9x9Ed7xUV29i7", // Implemented Link, no longer example
+		date: "Saturday, May 30",
 		time: "Gates 6:15 | Show 7:00 – 9:00 PM",
 		artists: [
 			{
@@ -14,24 +14,49 @@
 				note: "THE OPENER",
 				logo: "/iconic-logo.png",
 				style: "color",
-			},
-			{
-				name: "The Sassanachs",
-				genre: "Bluegrass / Irish",
-				note: "FEATURED",
-				logo: "/sassanachs-logo.png",
-				style: "theme",
+				sponsor: "Horn Auto",
 			},
 			{
 				name: "The Flannelbacks",
 				genre: "Folk / Bluegrass",
-				note: "HEADLINER",
+				note: "FEATURED",
 				logo: "/flannelbacks-photo.png",
 				style: "photo",
+				sponsor: "Conrade Insurance Group",
+			},
+			{
+				name: "The Sassanachs",
+				genre: "Bluegrass / Irish",
+				note: "HEADLINER",
+				logo: "/sassanachs-logo.png",
+				style: "theme",
+				sponsor: "Shamrock Car Wash & Union State Bank",
 			},
 		],
-		earlybirdPrice: "$5",
-		gatePrice: "$7",
+		sponsors: [
+			{
+				name: "Conrade Insurance Group",
+				logo: "/Conrade.png",
+				alt: "Conrade Insurance Group Logo",
+			},
+			{
+				name: "Horn Auto",
+				logo: "/Horn%20Auto%20Logo.jpg",
+				alt: "Horn Auto Logo",
+			},
+			{
+				name: "Shamrock Car Wash",
+				logo: "/SCW.jpg",
+				alt: "Shamrock Car Wash Logo",
+			},
+			{
+				name: "Union State Bank",
+				logo: "/USB.jpg",
+				alt: "Union State Bank Logo",
+			},
+		],
+		earlybirdPrice: "$6",
+		gatePrice: "$8",
 		squareLink: "https://square.link/u/ue0DR6Tt",
 		cashApp: "$373FineArts",
 		faqs: [
@@ -106,7 +131,7 @@
 	>
 	<meta
 		name="description"
-		content="The biggest community concert in Newton, Kansas! Join us May 30 at Fischer Field Band Shell for live music featuring icoNic, The Sassanachs, and The Flannelbacks. Supporting Newton Fine Arts Booster Club (FABC)."
+		content="The biggest community concert in Newton, Kansas! Join us May 30 at Fischer Field Band Shell for live music featuring icoNic, The Flannelbacks, and The Sassanachs. Supporting Newton Fine Arts Booster Club (FABC)."
 	/>
 	<meta
 		name="keywords"
@@ -165,13 +190,13 @@
 				"image": ["https://concertinthepark.org/social-preview.png"],
 				"performer": [
 					{ "@type": "Person", "name": "icoNic" },
-					{ "@type": "Person", "name": "The Sassanachs" },
-					{ "@type": "Person", "name": "The Flannelbacks" }
+					{ "@type": "Person", "name": "The Flannelbacks" },
+					{ "@type": "Person", "name": "The Sassanachs" }
 				],
 				"offers": {
 					"@type": "Offer",
 					"url": "https://concertinthepark.org#tickets",
-					"price": "5.00",
+					"price": "6.00",
 					"priceCurrency": "USD",
 					"availability": "https://schema.org/InStock",
 					"validFrom": "2026-01-01"
@@ -227,6 +252,7 @@
 			<a href="#about" onclick={closeMobileMenu}>The Mission</a>
 			<a href="#lineup" onclick={closeMobileMenu}>The Music</a>
 			<a href="#venue" onclick={closeMobileMenu}>The Venue</a>
+			<a href="#sponsors" onclick={closeMobileMenu}>Sponsors</a>
 			<a href="#tickets" class="btn btn--nav" onclick={closeMobileMenu}
 				>Get Tickets</a
 			>
@@ -351,6 +377,13 @@
 							<div class="artist-label">{artist.note}</div>
 							<h3 class="artist-name">{artist.name}</h3>
 							<p class="artist-genre">{artist.genre}</p>
+							{#if artist.sponsor}
+								<p class="artist-sponsor">
+									Sponsored by <br /><strong
+										>{artist.sponsor}</strong
+									>
+								</p>
+							{/if}
 						</div>
 					</div>
 				{/each}
@@ -460,6 +493,28 @@
 						>
 					</p>
 				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="sponsors" class="sponsors">
+		<div class="container">
+			<h2 class="section-title text-center">
+				Our <span>Sponsors</span>
+			</h2>
+			<div class="sponsors-grid">
+				{#each eventDetails.sponsors as sponsor}
+					<div class="sponsor-card">
+						<div class="sponsor-logo-wrap">
+							<img
+								src={sponsor.logo}
+								alt={sponsor.alt}
+								class="sponsor-logo"
+							/>
+						</div>
+						<h3 class="sponsor-name">{sponsor.name}</h3>
+					</div>
+				{/each}
 			</div>
 		</div>
 	</section>
@@ -1277,6 +1332,76 @@
 		color: var(--text-light);
 		line-height: 1.6;
 		font-size: 1.1rem;
+	}
+
+	/* Sponsors */
+	.sponsors {
+		padding: 100px 0 150px;
+		background: #000;
+	}
+
+	.sponsors-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 5rem;
+	}
+
+	.sponsor-card {
+		background: var(--surface);
+		padding: 2rem;
+		text-align: center;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		transition: all 0.3s;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.sponsor-card:hover {
+		border-color: var(--accent-1);
+		transform: translateY(-5px);
+	}
+
+	.sponsor-logo-wrap {
+		width: 100%;
+		height: 120px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.sponsor-logo {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+		filter: grayscale(100%) brightness(0.8);
+		transition: all 0.3s;
+	}
+
+	.sponsor-card:hover .sponsor-logo {
+		filter: grayscale(0%) brightness(1);
+	}
+
+	.sponsor-name {
+		font-family: var(--font-heading);
+		font-size: 1.2rem;
+		margin: 0;
+		color: var(--text-light);
+	}
+
+	.artist-sponsor {
+		color: var(--text-light);
+		font-size: 0.9rem;
+		margin-top: 1rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		padding-top: 1rem;
+	}
+
+	.artist-sponsor strong {
+		color: var(--accent-1);
 	}
 
 	.footer {

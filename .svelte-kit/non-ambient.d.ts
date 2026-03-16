@@ -36,6 +36,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/hero-bg.png" | "/railer-logo.png" | "/robots.txt" | string & {};
+		Asset(): "/._fischer-field.png" | "/._flannelbacks-photo.png" | "/._iconic-logo.png" | "/._robots.txt" | "/._sassanachs-logo.png" | "/fischer-field.png" | "/flannelbacks-photo.png" | "/hero-bg.png" | "/iconic-logo.png" | "/railer-logo.png" | "/robots.txt" | "/sassanachs-logo.png" | string & {};
 	}
 }
