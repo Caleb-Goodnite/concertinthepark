@@ -15,6 +15,7 @@
 				logo: "/iconic-logo.png",
 				style: "color",
 				sponsor: "Horn Auto",
+				website: "https://iloveiconic.carrd.co/",
 			},
 			{
 				name: "The Flannelbacks",
@@ -23,14 +24,16 @@
 				logo: "/flannelbacks-photo.png",
 				style: "photo",
 				sponsor: "Conrade Insurance Group",
+				website: "https://www.facebook.com/flannelbacks/",
 			},
 			{
 				name: "The Sassanachs",
 				genre: "Bluegrass / Irish",
 				note: "HEADLINER",
-				logo: "/sassanachs-logo.png",
-				style: "theme",
+				logo: "/sassanachsupdated.png",
+				style: "photo",
 				sponsor: "Shamrock Car Wash & Union State Bank",
+				website: "https://sassanachsmusic.com/",
 			},
 		],
 		sponsors: [
@@ -57,7 +60,7 @@
 		],
 		earlybirdPrice: "$6",
 		gatePrice: "$8",
-		squareLink: "https://square.link/u/ue0DR6Tt",
+		squareLink: "https://square.link/u/75mLgyDm",
 		cashApp: "$373FineArts",
 		faqs: [
 			{
@@ -249,9 +252,10 @@
 			<span class="hamburger" class:open={mobileMenuOpen}></span>
 		</button>
 		<nav class="nav" class:open={mobileMenuOpen}>
-			<a href="#about" onclick={closeMobileMenu}>The Mission</a>
-			<a href="#lineup" onclick={closeMobileMenu}>The Music</a>
-			<a href="#venue" onclick={closeMobileMenu}>The Venue</a>
+			<a href="#about" onclick={closeMobileMenu}>Mission</a>
+			<a href="#lineup" onclick={closeMobileMenu}>Lineup</a>
+			<a href="#food" onclick={closeMobileMenu}>Food</a>
+			<a href="#venue" onclick={closeMobileMenu}>Venue</a>
 			<a href="#sponsors" onclick={closeMobileMenu}>Sponsors</a>
 			<a href="#tickets" class="btn btn--nav" onclick={closeMobileMenu}
 				>Get Tickets</a
@@ -360,16 +364,14 @@
 				{#each eventDetails.artists as artist, i}
 					<div class="artist-box" class:featured={i === 2}>
 						{#if artist.logo}
-							<div
-								class="artist-logo-wrap"
-								class:photo={artist.style === "photo"}
-							>
+							<div class="artist-logo-wrap">
 								<img
 									src={artist.logo}
 									alt={artist.name}
 									class="artist-logo"
 									class:themed={artist.style === "theme"}
 									class:is-photo={artist.style === "photo"}
+									class:is-color={artist.style === "color"}
 								/>
 							</div>
 						{/if}
@@ -377,6 +379,14 @@
 							<div class="artist-label">{artist.note}</div>
 							<h3 class="artist-name">{artist.name}</h3>
 							<p class="artist-genre">{artist.genre}</p>
+							{#if artist.website}
+								<a
+									href={artist.website}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="artist-link">Visit Website</a
+								>
+							{/if}
 							{#if artist.sponsor}
 								<p class="artist-sponsor">
 									Sponsored by <br /><strong
@@ -388,6 +398,41 @@
 					</div>
 				{/each}
 			</div>
+		</div>
+	</section>
+
+	<section id="food" class="food">
+		<div class="container">
+			<h2 class="section-title text-center">
+				Local <span>Flavor</span>
+				<span class="section-subtitle">Food stands are CASH ONLY</span>
+			</h2>
+			<div class="food-grid">
+				<div class="food-card">
+					<h3>Newton Band</h3>
+					<p>Ice Cold Water</p>
+				</div>
+				<div class="food-card">
+					<h3>Choir</h3>
+					<p>Ice Cream Floats</p>
+				</div>
+				<div class="food-card">
+					<h3>Robotics</h3>
+					<p>Chips and Salsa</p>
+				</div>
+				<div class="food-card">
+					<h3>BCAPA</h3>
+					<p>Bake Sale Items</p>
+				</div>
+				<div class="food-card">
+					<h3>SciOly</h3>
+					<p>Menu TBA</p>
+				</div>
+			</div>
+			<p class="food-note">
+				All food proceeds directly support these student organizations.
+				Feel free to bring your own spread!
+			</p>
 		</div>
 	</section>
 
@@ -447,7 +492,13 @@
 					</div>
 					<div class="ticket-footer">
 						<p>Fischer Field Band Shell | May 30</p>
-						<p><u>Bring your own chair and/or blanket.</u></p>
+						<div class="ticket-reminder">
+							<span>But don't forget...</span>
+							<strong
+								>Bring your own chair and/or blanket, or enjoy
+								nature's natural seat, the grass!</strong
+							>
+						</div>
 					</div>
 				</div>
 
@@ -538,6 +589,15 @@
 </main>
 
 <footer class="footer">
+	<div class="footer__content container">
+		<div class="footer__socials">
+			<a
+				href="https://www.facebook.com/61558151867417/albums/122117745512271728/"
+				target="_blank"
+				rel="noopener noreferrer">Facebook</a
+			>
+		</div>
+	</div>
 	<p class="copyright">
 		&copy; {new Date().getFullYear()} Newton Fine Arts Booster Club. Developed
 		by Anchorforge Digital. All Rights Reserved.
@@ -717,9 +777,8 @@
 
 	.nav {
 		display: flex;
-		gap: 3.5rem;
+		gap: 2.2rem;
 		align-items: center;
-		flex-wrap: wrap; /* Allow wrapping on small screens */
 	}
 
 	.nav a {
@@ -950,6 +1009,18 @@
 		letter-spacing: -0.04em;
 	}
 
+	.section-subtitle {
+		display: block;
+		font-family: var(--font-body);
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		color: var(--accent-1);
+		letter-spacing: 0.3em;
+		font-weight: 900;
+		margin-top: 1.5rem;
+		opacity: 0.7;
+	}
+
 	.section-title span {
 		color: var(--accent-3);
 	}
@@ -1028,6 +1099,12 @@
 		position: relative;
 	}
 
+	.artist-box.featured {
+		background: var(--surface);
+		border: 1px solid rgba(247, 209, 59, 0.3);
+		box-shadow: 0 0 50px rgba(247, 209, 59, 0.05);
+	}
+
 	.artist-logo-wrap {
 		width: 100%;
 		height: 180px;
@@ -1035,15 +1112,10 @@
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 2rem;
-		background: rgba(255, 255, 255, 0.03);
-		border: 1px dashed rgba(255, 255, 255, 0.1);
+		background: #000;
+		border: 1px solid rgba(255, 255, 255, 0.1);
 		overflow: hidden;
 		border-radius: 4px;
-	}
-
-	.artist-logo-wrap.photo {
-		border: none;
-		background: #000;
 	}
 
 	.artist-logo {
@@ -1056,16 +1128,20 @@
 	.artist-logo.themed {
 		filter: brightness(0) invert(1);
 	}
-
 	.artist-logo.is-photo {
 		max-width: 100%;
 		max-height: 100%;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+
+	.artist-logo.is-color,
+	.artist-logo.is-photo {
 		filter: grayscale(100%) contrast(1.2);
 	}
 
+	.artist-box:hover .is-color,
 	.artist-box:hover .is-photo {
 		filter: grayscale(0%) contrast(1);
 	}
@@ -1089,13 +1165,45 @@
 
 	.artist-name {
 		font-family: var(--font-heading);
-		font-size: 2rem;
+		font-size: 2.2rem;
 		margin: 0 0 1rem 0;
 		font-weight: 900;
 		line-height: 1.1;
 		overflow-wrap: break-word;
 		word-wrap: break-word;
 		hyphens: auto;
+	}
+
+	.artist-link {
+		color: var(--accent-1);
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		display: inline-block;
+		margin-bottom: 2rem;
+		transition: all 0.3s;
+		position: relative;
+	}
+
+	.artist-link::after {
+		content: "";
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 20px;
+		height: 2px;
+		background: var(--accent-1);
+		transition: all 0.3s;
+	}
+
+	.artist-link:hover::after {
+		width: 100%;
+	}
+
+	.artist-link:hover {
+		color: white;
 	}
 
 	.artist-genre {
@@ -1181,6 +1289,38 @@
 		text-decoration: line-through;
 	}
 
+	.ticket-footer {
+		margin-top: 4rem;
+		padding-top: 2rem;
+		border-top: 1px dashed rgba(0, 0, 0, 0.2);
+	}
+
+	.ticket-footer p {
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 0.9rem;
+		margin-bottom: 1.5rem;
+		opacity: 0.8;
+	}
+
+	.ticket-reminder span {
+		display: block;
+		text-transform: uppercase;
+		font-weight: 900;
+		font-size: 0.75rem;
+		opacity: 0.6;
+		letter-spacing: 0.1em;
+		margin-bottom: 0.5rem;
+	}
+
+	.ticket-reminder strong {
+		font-family: var(--font-heading);
+		font-size: clamp(1.8rem, 4vw, 2.2rem);
+		display: block;
+		line-height: 1.1;
+		font-weight: 800;
+	}
+
 	.payment-hub h3 {
 		font-size: 2.5rem;
 		font-family: var(--font-heading);
@@ -1235,6 +1375,65 @@
 	.hub-btn small {
 		color: var(--text-light);
 		font-size: 1rem;
+	}
+
+	/* Food & Drinks */
+	.food {
+		padding: 150px 0;
+		background: #000;
+	}
+
+	.food-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 3rem;
+		margin-top: 5rem;
+	}
+
+	.food-card {
+		background: var(--surface);
+		padding: 3rem;
+		border-radius: 4px;
+		text-align: center;
+		transition: all 0.3s;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 200px;
+	}
+
+	.food-card:hover {
+		border-color: var(--accent-1);
+		transform: translateY(-5px);
+	}
+
+	.food-card h3 {
+		font-size: 0.8rem;
+		font-weight: 900;
+		color: var(--accent-1);
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		margin-bottom: 1rem;
+	}
+
+	.food-card p {
+		font-family: var(--font-heading);
+		font-size: 1.8rem;
+		font-weight: 800;
+		line-height: 1.1;
+		margin: 0;
+	}
+
+	.food-note {
+		text-align: center;
+		margin-top: 5rem;
+		color: var(--text-light);
+		font-style: italic;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		letter-spacing: 0.1em;
 	}
 
 	/* Venue */
@@ -1401,6 +1600,30 @@
 		background: #000;
 	}
 
+	.footer__content {
+		margin-bottom: 4rem;
+	}
+
+	.footer__socials {
+		display: flex;
+		gap: 2rem;
+		justify-content: center;
+	}
+
+	.footer__socials a {
+		color: var(--text-light);
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-size: 0.9rem;
+		transition: all 0.3s;
+	}
+
+	.footer__socials a:hover {
+		color: var(--accent-1);
+	}
+
 	.copyright {
 		border-top: 1px solid rgba(255, 255, 255, 0.05);
 		padding-top: 3rem;
@@ -1430,7 +1653,7 @@
 		}
 	}
 
-	@media (max-width: 1100px) {
+	@media (max-width: 1200px) {
 		.mobile-menu-toggle {
 			display: block;
 		}
@@ -1462,6 +1685,9 @@
 	@media (max-width: 600px) {
 		.hero__title {
 			font-size: 18vw;
+		}
+		.footer__content {
+			margin-bottom: 3rem;
 		}
 		.hero__actions {
 			flex-direction: column;
