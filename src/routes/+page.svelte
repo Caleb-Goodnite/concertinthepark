@@ -417,11 +417,8 @@
 	<section id="food" class="food">
 		<div class="container">
 			<h2 class="section-title text-center">
-				Local <span>Flavor</span> & <span>Events</span>
-				<span class="section-subtitle"
-					>The Best Things to Do in Newton, KS — Food stands are CASH
-					ONLY</span
-				>
+				Local <span>Flavor</span>
+				<span class="section-subtitle">Food stands are CASH ONLY</span>
 			</h2>
 			<div class="food-grid">
 				<div class="food-card">
