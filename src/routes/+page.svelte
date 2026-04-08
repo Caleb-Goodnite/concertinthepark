@@ -130,7 +130,8 @@
 
 <svelte:head>
 	<title
-		>Concert in the Park 2026 | Best Events in Newton, KS | Live Music & Concerts Near Me</title
+		>Concert in the Park 2026 | Best Events in Newton, KS | Live Music &
+		Concerts Near Me</title
 	>
 	<meta
 		name="description"
@@ -287,7 +288,10 @@
 				Concert in the Park: <br /><span>Music's better together.</span>
 			</h1>
 			<p class="hero__subtitle">
-				Experience the best <strong>live music in Newton, KS</strong>! Every ticket supports our student artists through the <strong>Fine Arts Booster Club</strong>. Let’s make some noise for the next generation.
+				Experience the best <strong>live music in Newton, KS</strong>!
+				Every ticket supports our student artists through the
+				<strong>Fine Arts Booster Club</strong>. Let’s make some noise
+				for the next generation.
 			</p>
 
 			<div class="hero__countdown">
@@ -334,7 +338,9 @@
 				<h2 class="section-title">
 					Supporting our <span>stars.</span>
 				</h2>
-				<p class="section-subtitle">A Community Initiative in Newton, Kansas</p>
+				<p class="section-subtitle">
+					A Community Initiative in Newton, Kansas
+				</p>
 				<p class="large-text">
 					The Fine Arts Booster Club isn't just a group of
 					parents—we're a community dedicated to keeping the arts
@@ -364,7 +370,9 @@
 			<h2 class="section-title text-center">
 				The <span>Soul</span> of the <span>Park</span>
 			</h2>
-			<p class="section-subtitle text-center">Live Music & Concerts in Newton, KS</p>
+			<p class="section-subtitle text-center">
+				Live Music & Concerts in Newton, KS
+			</p>
 			<div class="lineup-grid">
 				{#each eventDetails.artists as artist, i}
 					<div class="artist-box" class:featured={i === 2}>
@@ -410,7 +418,10 @@
 		<div class="container">
 			<h2 class="section-title text-center">
 				Local <span>Flavor</span> & <span>Events</span>
-				<span class="section-subtitle">The Best Things to Do in Newton, KS — Food stands are CASH ONLY</span>
+				<span class="section-subtitle"
+					>The Best Things to Do in Newton, KS — Food stands are CASH
+					ONLY</span
+				>
 			</h2>
 			<div class="food-grid">
 				<div class="food-card">
@@ -430,7 +441,7 @@
 					<p>Bake Sale Items</p>
 				</div>
 				<div class="food-card">
-					<h3>SciOly</h3>
+					<h3>Science Olympiad</h3>
 					<p>Menu TBA</p>
 				</div>
 			</div>
@@ -446,7 +457,9 @@
 			<div class="venue__layout">
 				<div class="venue__info">
 					<h2 class="section-title">The <span>Venue</span></h2>
-					<p class="section-subtitle">Historic Events in Newton, KS</p>
+					<p class="section-subtitle">
+						Historic Events in Newton, KS
+					</p>
 					<p class="large-text">{eventDetails.location}</p>
 					<p>{eventDetails.address}</p>
 					<p class="venue__description">
