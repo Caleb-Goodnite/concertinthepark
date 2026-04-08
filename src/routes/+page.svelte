@@ -70,7 +70,7 @@
 			},
 			{
 				q: "What happens if it rains?",
-				a: "In the event of severe weather, we will announce a rain date on our social media channels.",
+				a: "In the event of severe weather, we will hold the event in Ravenscroft Gym at Newton High School.",
 			},
 			{
 				q: "How does it support the arts?",
@@ -538,19 +538,10 @@
 </main>
 
 <footer class="footer">
-	<div class="container">
-		<div class="footer__content">
-			<div class="footer__socials">
-				<a href="/" aria-label="Facebook">FB</a>
-				<a href="/" aria-label="Instagram">IG</a>
-				<a href="/" aria-label="Twitter">TW</a>
-			</div>
-		</div>
-		<p class="copyright">
-			&copy; {new Date().getFullYear()} Newton Fine Arts Booster Club. Developed
-			by Anchorforge Digital. All Rights Reserved.
-		</p>
-	</div>
+	<p class="copyright">
+		&copy; {new Date().getFullYear()} Newton Fine Arts Booster Club. Developed
+		by Anchorforge Digital. All Rights Reserved.
+	</p>
 </footer>
 
 <style>
@@ -1410,29 +1401,6 @@
 		background: #000;
 	}
 
-	.footer__content {
-		margin-bottom: 4rem;
-	}
-
-	.footer__socials {
-		display: flex;
-		gap: 2.5rem;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.footer__socials a {
-		color: white;
-		text-decoration: none;
-		font-weight: 900;
-		font-size: 1.2rem;
-		transition: color 0.3s;
-	}
-
-	.footer__socials a:hover {
-		color: var(--accent-1);
-	}
-
 	.copyright {
 		border-top: 1px solid rgba(255, 255, 255, 0.05);
 		padding-top: 3rem;
@@ -1494,12 +1462,6 @@
 	@media (max-width: 600px) {
 		.hero__title {
 			font-size: 18vw;
-		}
-		.footer__content {
-			margin-bottom: 3rem;
-		}
-		.footer__socials {
-			justify-content: center;
 		}
 		.hero__actions {
 			flex-direction: column;

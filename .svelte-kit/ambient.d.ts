@@ -41,7 +41,6 @@ declare module '$env/static/private' {
 	export const npm_config_registry: string;
 	export const USER: string;
 	export const COMMAND_MODE: string;
-	export const VSCODE_LOGIN_INITIALIZED: string;
 	export const npm_config_globalconfig: string;
 	export const PNPM_SCRIPT_SRC_DIR: string;
 	export const SSH_AUTH_SOCK: string;
@@ -129,7 +128,6 @@ declare module '$env/dynamic/private' {
 		npm_config_registry: string;
 		USER: string;
 		COMMAND_MODE: string;
-		VSCODE_LOGIN_INITIALIZED: string;
 		npm_config_globalconfig: string;
 		PNPM_SCRIPT_SRC_DIR: string;
 		SSH_AUTH_SOCK: string;

@@ -36,6 +36,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/._fischer-field.png" | "/._flannelbacks-photo.png" | "/._iconic-logo.png" | "/._robots.txt" | "/._sassanachs-logo.png" | "/fischer-field.png" | "/flannelbacks-photo.png" | "/hero-bg.png" | "/iconic-logo.png" | "/railer-logo.png" | "/robots.txt" | "/sassanachs-logo.png" | string & {};
+		Asset(): "/Conrade.png" | "/Horn Auto Logo.jpg" | "/SCW.jpg" | "/USB.jpg" | "/fischer-field.png" | "/flannelbacks-photo.png" | "/hero-bg.png" | "/iconic-logo.png" | "/railer-logo.png" | "/robots.txt" | "/sassanachs-logo.png" | string & {};
 	}
 }
