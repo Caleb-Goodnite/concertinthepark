@@ -431,7 +431,6 @@
 			</div>
 			<p class="food-note">
 				All food proceeds directly support these student organizations.
-				Feel free to bring your own spread!
 			</p>
 		</div>
 	</section>
