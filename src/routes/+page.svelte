@@ -432,6 +432,7 @@
 			<p class="food-note">
 				All food proceeds directly support these student organizations.
 			</p>
+			<p>This is an ALCOLHOL FREE event.</p>
 		</div>
 	</section>
 
