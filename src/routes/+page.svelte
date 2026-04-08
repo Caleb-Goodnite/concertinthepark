@@ -130,15 +130,15 @@
 
 <svelte:head>
 	<title
-		>Concert in the Park | Live Music Newton KS | May 30 Fischer Field</title
+		>Concert in the Park 2026 | Best Events in Newton, KS | Live Music & Concerts Near Me</title
 	>
 	<meta
 		name="description"
-		content="The biggest community concert in Newton, Kansas! Join us May 30 at Fischer Field Band Shell for live music featuring icoNic, The Flannelbacks, and The Sassanachs. Supporting Newton Fine Arts Booster Club (FABC)."
+		content="Looking for things to do in Newton, KS? Join us for the biggest community concert in Newton, Kansas on May 30! Live music at Fischer Field Band Shell featuring icoNic, The Flannelbacks, and The Sassanachs. All proceeds support student artists."
 	/>
 	<meta
 		name="keywords"
-		content="Concert in the Park, Newton KS events, things to do Newton Kansas, Fischer Field Band Shell, live music Newton KS, Newton Fine Arts Booster Club, FABC Newton, Newton Railers, community events Newton, May 30 events Kansas, student arts support, Newton Kansas concerts"
+		content="Concert in the Park, Newton KS events, things to do Newton Kansas, Fischer Field Band Shell, live music Newton KS, Newton Fine Arts Booster Club, FABC Newton, Newton Railers, community events Newton, May 30 events Kansas, student arts support, Newton Kansas concerts, concerts near me local events, family friendly things to do Newton"
 	/>
 
 	<meta
@@ -147,9 +147,9 @@
 	/>
 	<meta
 		property="og:description"
-		content="Don't miss the 2026 Concert in the Park at Fischer Field. Support student artists and enjoy a night of amazing live music. Get earlybird tickets now!"
+		content="Searching for the best events in Newton, KS? Don't miss the 2026 Concert in the Park at Fischer Field. Support student artists and enjoy a night of amazing live music."
 	/>
-	<meta property="og:url" content="https://concertinthepark.org" />
+	<meta property="og:url" content="https://concertinthepark.net" />
 	<meta property="og:site_name" content="Concert in the Park - Newton, KS" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="/social-preview.png" />
@@ -161,25 +161,25 @@
 	/>
 	<meta
 		name="twitter:description"
-		content="Support the Arts! Join us at the Fischer Field Band Shell for Newton's premier music event. Earlybird tickets on sale now."
+		content="Best things to do in Newton, KS this May! Join us at the Fischer Field Band Shell for Newton's premier music event."
 	/>
 	<meta name="twitter:image" content="/social-preview.png" />
-	<link rel="canonical" href="https://concertinthepark.org" />
+	<link rel="canonical" href="https://concertinthepark.net" />
 
 	<!-- Structured Data: Combined Event and LocalBusiness -->
 	<script type="application/ld+json">
 		[
 			{
 				"@context": "https://schema.org",
-				"@type": "Event",
+				"@type": "MusicEvent",
 				"name": "Concert in the Park 2026",
-				"description": "Annual community concert supporting local student artists through the Newton Fine Arts Booster Club (FABC).",
+				"description": "The best community concert and thing to do in Newton, Kansas! Supporting local student artists through the Newton Fine Arts Booster Club (FABC).",
 				"startDate": "2026-05-30T19:00",
 				"endDate": "2026-05-30T21:00",
 				"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
 				"eventStatus": "https://schema.org/EventScheduled",
 				"location": {
-					"@type": "Place",
+					"@type": "MusicVenue",
 					"name": "Fischer Field Band Shell",
 					"address": {
 						"@type": "PostalAddress",
@@ -190,15 +190,20 @@
 						"addressCountry": "US"
 					}
 				},
-				"image": ["https://concertinthepark.org/social-preview.png"],
+				"image": ["https://concertinthepark.net/social-preview.png"],
+				"organizer": {
+					"@type": "NGO",
+					"name": "Newton Fine Arts Booster Club",
+					"url": "https://concertinthepark.net"
+				},
 				"performer": [
-					{ "@type": "Person", "name": "icoNic" },
-					{ "@type": "Person", "name": "The Flannelbacks" },
-					{ "@type": "Person", "name": "The Sassanachs" }
+					{ "@type": "MusicGroup", "name": "icoNic" },
+					{ "@type": "MusicGroup", "name": "The Flannelbacks" },
+					{ "@type": "MusicGroup", "name": "The Sassanachs" }
 				],
 				"offers": {
 					"@type": "Offer",
-					"url": "https://concertinthepark.org#tickets",
+					"url": "https://concertinthepark.net#tickets",
 					"price": "6.00",
 					"priceCurrency": "USD",
 					"availability": "https://schema.org/InStock",
@@ -210,8 +215,8 @@
 				"@type": "NGO",
 				"name": "Newton Fine Arts Booster Club",
 				"alternateName": "Newton FABC",
-				"url": "https://concertinthepark.org",
-				"logo": "https://concertinthepark.org/railer-logo.png",
+				"url": "https://concertinthepark.net",
+				"logo": "https://concertinthepark.net/railer-logo.png",
 				"description": "Supporting the arts and student artists in the Newton, Kansas community.",
 				"address": {
 					"@type": "PostalAddress",
@@ -277,14 +282,12 @@
 			<div class="hero__color-overlay"></div>
 		</div>
 		<div class="container hero__content">
-			<div class="hero__float-text">Join the harmony</div>
+			<div class="hero__float-text">Join the harmony | Newton, KS</div>
 			<h1 class="hero__title">
-				Music's better <br /><span>together.</span>
+				Concert in the Park: <br /><span>Music's better together.</span>
 			</h1>
 			<p class="hero__subtitle">
-				Every ticket supports our student artists through the <strong
-					>Fine Arts Booster Club</strong
-				>. Let’s make some noise for the next generation.
+				Experience the best <strong>live music in Newton, KS</strong>! Every ticket supports our student artists through the <strong>Fine Arts Booster Club</strong>. Let’s make some noise for the next generation.
 			</p>
 
 			<div class="hero__countdown">
@@ -331,6 +334,7 @@
 				<h2 class="section-title">
 					Supporting our <span>stars.</span>
 				</h2>
+				<p class="section-subtitle">A Community Initiative in Newton, Kansas</p>
 				<p class="large-text">
 					The Fine Arts Booster Club isn't just a group of
 					parents—we're a community dedicated to keeping the arts
@@ -360,6 +364,7 @@
 			<h2 class="section-title text-center">
 				The <span>Soul</span> of the <span>Park</span>
 			</h2>
+			<p class="section-subtitle text-center">Live Music & Concerts in Newton, KS</p>
 			<div class="lineup-grid">
 				{#each eventDetails.artists as artist, i}
 					<div class="artist-box" class:featured={i === 2}>
@@ -404,8 +409,8 @@
 	<section id="food" class="food">
 		<div class="container">
 			<h2 class="section-title text-center">
-				Local <span>Flavor</span>
-				<span class="section-subtitle">Food stands are CASH ONLY</span>
+				Local <span>Flavor</span> & <span>Events</span>
+				<span class="section-subtitle">The Best Things to Do in Newton, KS — Food stands are CASH ONLY</span>
 			</h2>
 			<div class="food-grid">
 				<div class="food-card">
@@ -441,6 +446,7 @@
 			<div class="venue__layout">
 				<div class="venue__info">
 					<h2 class="section-title">The <span>Venue</span></h2>
+					<p class="section-subtitle">Historic Events in Newton, KS</p>
 					<p class="large-text">{eventDetails.location}</p>
 					<p>{eventDetails.address}</p>
 					<p class="venue__description">
@@ -598,6 +604,10 @@
 			>
 		</div>
 	</div>
+	<p class="footer__seo">
+		Newton's premier community concert event. Your source for live music,
+		local food, and the best things to do in Newton, KS.
+	</p>
 	<p class="copyright">
 		&copy; {new Date().getFullYear()} Newton Fine Arts Booster Club. Developed
 		by Anchorforge Digital. All Rights Reserved.
@@ -1311,6 +1321,21 @@
 		opacity: 0.6;
 		letter-spacing: 0.1em;
 		margin-bottom: 0.5rem;
+	}
+
+	.footer__seo {
+		max-width: 600px;
+		margin: 2rem auto 1rem;
+		font-size: 0.9rem;
+		opacity: 0.6;
+		line-height: 1.4;
+	}
+
+	.copyright {
+		font-size: 0.8rem;
+		opacity: 0.4;
+		margin: 0;
+		padding-bottom: 2rem;
 	}
 
 	.ticket-reminder strong {

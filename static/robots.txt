@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://concertinthepark.org/sitemap.xml
+Sitemap: https://concertinthepark.net/sitemap.xml
