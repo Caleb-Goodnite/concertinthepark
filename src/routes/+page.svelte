@@ -69,7 +69,7 @@
 			},
 			{
 				q: "Is there food and drink?",
-				a: "Yes! Local vendors will be on-site with refreshments. You are also welcome to bring your own snacks.",
+				a: "Yes! Local vendors will be on-site with refreshments. As this is a family-friendly, tobacco-free community event, please do not bring any outside food or beverages.",
 			},
 			{
 				q: "What happens if it rains?",
@@ -77,7 +77,11 @@
 			},
 			{
 				q: "How does it support the arts?",
-				a: "100% of ticket proceeds go directly to the Newton Fine Arts Booster Club to fund scholarships and equipment for student artists.",
+				a: "100% of ticket proceeds go directly to the Newton Fine Arts Booster Club to fund scholarships and equipment for students in band, choir, drama, and art.",
+			},
+			{
+				q: "Is smoking or alcohol permitted?",
+				a: "No. Concert in the Park is a strictly tobacco-free and alcohol-free event to ensure a safe, family-friendly environment for all our guests.",
 			},
 		],
 	};
@@ -174,7 +178,7 @@
 				"@context": "https://schema.org",
 				"@type": "MusicEvent",
 				"name": "Concert in the Park 2026",
-				"description": "The best community concert and thing to do in Newton, Kansas! Supporting local student artists through the Newton Fine Arts Booster Club (FABC).",
+				"description": "The best community concert in Newton, Kansas! Supporting students in band, choir, drama, and art through the Newton Fine Arts Booster Club (FABC).",
 				"startDate": "2026-05-30T19:00",
 				"endDate": "2026-05-30T21:00",
 				"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -218,7 +222,7 @@
 				"alternateName": "Newton FABC",
 				"url": "https://concertinthepark.net",
 				"logo": "https://concertinthepark.net/railer-logo.png",
-				"description": "Supporting the arts and student artists in the Newton, Kansas community.",
+				"description": "Supporting students in band, choir, drama, and art in the Newton, Kansas community.",
 				"address": {
 					"@type": "PostalAddress",
 					"addressLocality": "Newton",
@@ -283,13 +287,15 @@
 			<div class="hero__color-overlay"></div>
 		</div>
 		<div class="container hero__content">
-			<div class="hero__float-text">Join the harmony | Newton, KS</div>
+			<div class="hero__float-text">
+				Join the harmony | Newton, KS | Tobacco Free Event
+			</div>
 			<h1 class="hero__title">
 				Concert in the Park: <br /><span>Music's better together.</span>
 			</h1>
 			<p class="hero__subtitle">
 				Experience the best <strong>live music in Newton, KS</strong>!
-				Every ticket supports our student artists through the
+				Every ticket supports students in <strong>band, choir, drama, and art</strong> through the
 				<strong>Fine Arts Booster Club</strong>. Let’s make some noise
 				for the next generation.
 			</p>
@@ -444,7 +450,10 @@
 			</div>
 			<p class="food-note">
 				All food proceeds directly support these student organizations.
-				<br /><u>This is an ALCOLHOL FREE event.</u>
+				<br /><u
+					>This is a family-friendly, TOBACCO & ALCOHOL FREE event. Please, no
+					outside food or beverages.</u
+				>
 			</p>
 		</div>
 	</section>
@@ -460,9 +469,12 @@
 					<p class="large-text">{eventDetails.location}</p>
 					<p>{eventDetails.address}</p>
 					<p class="venue__description">
-						Join us at the historic Fischer Field Band Shell. This
-						open-air venue provides the perfect backdrop for an
-						evening of community and music.
+						Join us at the Fischer Field Band Shell. This open-air
+						venue provides the perfect backdrop for an evening of
+						community and music. <strong
+							>Fischer Field is a family-friendly, tobacco-free
+							environment.</strong
+						>
 					</p>
 					<a
 						href={eventDetails.googleMaps}
@@ -546,8 +558,7 @@
 						>
 							<strong>Square</strong> Checkout
 							<small
-								>All major cards accepted •
-								<br />Small service fee applies</small
+								>All major cards accepted</small
 							>
 						</a>
 					</div>
@@ -640,6 +651,7 @@
 		--text-light: #a0a0a0;
 		--font-heading: "Fraunces", serif;
 		--font-body: "Lato", sans-serif;
+		--section-padding: clamp(4rem, 10vw, 10rem);
 	}
 
 	:global(html) {
@@ -1010,7 +1022,7 @@
 
 	/* Mission Section */
 	.mission {
-		padding: 200px 0 150px 0;
+		padding: var(--section-padding) 0;
 	}
 
 	.mission__layout {
@@ -1022,9 +1034,9 @@
 
 	.section-title {
 		font-family: var(--font-heading);
-		font-size: clamp(4rem, 8vw, 7rem);
+		font-size: clamp(3rem, 8vw, 7rem);
 		line-height: 0.85;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 		font-weight: 900;
 		letter-spacing: -0.04em;
 	}
@@ -1093,7 +1105,7 @@
 
 	/* Lineup */
 	.lineup {
-		padding: 150px 0;
+		padding: var(--section-padding) 0;
 		background: #000;
 	}
 
@@ -1237,7 +1249,7 @@
 
 	/* Tickets */
 	.tickets {
-		padding: 150px 0;
+		padding: var(--section-padding) 0;
 	}
 
 	.ticket-wrapper {
@@ -1250,7 +1262,7 @@
 	.ticket-design {
 		background: var(--accent-1);
 		color: black;
-		padding: 6rem;
+		padding: clamp(2rem, 5vw, 6rem);
 		clip-path: polygon(
 			100% 0,
 			100% 33%,
@@ -1277,7 +1289,7 @@
 
 	.ticket-header h2 {
 		font-family: var(--font-heading);
-		font-size: 4rem;
+		font-size: clamp(2.5rem, 6vw, 4rem);
 		font-weight: 900;
 		margin: 0;
 		line-height: 1;
@@ -1285,7 +1297,8 @@
 
 	.ticket-values {
 		display: flex;
-		gap: 5rem;
+		flex-wrap: wrap;
+		gap: clamp(2rem, 5vw, 5rem);
 		margin: 4rem 0;
 	}
 
@@ -1414,7 +1427,7 @@
 
 	/* Food & Drinks */
 	.food {
-		padding: 150px 0;
+		padding: var(--section-padding) 0;
 		background: #000;
 	}
 
@@ -1473,7 +1486,7 @@
 
 	/* Venue */
 	.venue {
-		padding: 150px 0;
+		padding: var(--section-padding) 0;
 		background: var(--surface);
 	}
 
@@ -1531,7 +1544,7 @@
 
 	/* FAQ */
 	.faq {
-		padding: 150px 0;
+		padding: var(--section-padding) 0;
 	}
 
 	.faq-grid {
@@ -1562,7 +1575,7 @@
 
 	/* Sponsors */
 	.sponsors {
-		padding: 100px 0 150px;
+		padding: var(--section-padding) 0;
 		background: #000;
 	}
 
@@ -1631,7 +1644,7 @@
 	}
 
 	.footer {
-		padding: 100px 0 50px;
+		padding: var(--section-padding) 0 50px;
 		background: #000;
 	}
 
@@ -1675,16 +1688,17 @@
 		.venue__layout,
 		.ticket-wrapper {
 			grid-template-columns: 1fr;
-			gap: 5rem;
-		}
-		.section-title {
-			font-size: 4rem;
+			gap: 4rem;
 		}
 		.lineup-grid {
 			grid-template-columns: 1fr;
 		}
 		.venue__visual {
 			order: -1;
+		}
+		.ticket-design {
+			clip-path: none; /* Simplify for mobile to gain space */
+			border-radius: 8px;
 		}
 	}
 
@@ -1696,45 +1710,59 @@
 			position: fixed;
 			top: 0;
 			right: -100%;
-			width: 80%;
-			max-width: 300px;
+			width: 85%;
+			max-width: 320px;
 			height: 100vh;
 			background: rgba(10, 10, 10, 0.98);
 			backdrop-filter: blur(20px);
 			flex-direction: column;
 			align-items: flex-start;
-			padding: 100px 2rem 2rem;
-			gap: 2rem;
-			transition: right 0.3s ease;
+			padding: 100px 2.5rem 2.5rem;
+			gap: 1.5rem;
+			transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 			z-index: 1000;
+			box-shadow: -20px 0 50px rgba(0, 0, 0, 0.5);
 		}
 		.nav.open {
 			right: 0;
 		}
 		.nav a {
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 			width: 100%;
+			padding: 0.5rem 0;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+		}
+		.btn--nav {
+			margin-top: 1rem;
+			text-align: center;
 		}
 	}
 
 	@media (max-width: 600px) {
 		.hero__title {
-			font-size: 18vw;
-		}
-		.footer__content {
-			margin-bottom: 3rem;
+			font-size: clamp(2.5rem, 15vw, 5rem);
 		}
 		.hero__actions {
 			flex-direction: column;
+			width: 100%;
+		}
+		.hero__actions .btn {
+			width: 100%;
+			text-align: center;
 		}
 		.ticket-values {
+			flex-direction: column;
 			gap: 2rem;
 		}
 		.val .v {
-			font-size: 3.5rem;
+			font-size: clamp(3rem, 10vw, 5rem);
 		}
-		.ticket-design {
-			padding: 3rem;
+		.payment-hub h3 {
+			font-size: 1.8rem;
+		}
+		.hub-btn {
+			padding: 1.5rem;
+			min-height: auto;
 		}
 	}
 </style>
