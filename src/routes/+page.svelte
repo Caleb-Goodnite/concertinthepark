@@ -28,7 +28,7 @@
 			},
 			{
 				name: "The Sassanachs",
-				genre: "Bluegrass / Irish",
+				genre: "Irish Punk Rock",
 				note: "HEADLINER",
 				logo: "/sassanachsupdated.png",
 				style: "photo",
@@ -295,7 +295,9 @@
 			</h1>
 			<p class="hero__subtitle">
 				Experience the best <strong>live music in Newton, KS</strong>!
-				Every ticket supports students in <strong>band, choir, drama, and art</strong> through the
+				Every ticket supports students in
+				<strong>band, choir, drama, and art</strong>
+				through the
 				<strong>Fine Arts Booster Club</strong>. Let’s make some noise
 				for the next generation.
 			</p>
@@ -451,8 +453,8 @@
 			<p class="food-note">
 				All food proceeds directly support these student organizations.
 				<br /><u
-					>This is a family-friendly, TOBACCO & ALCOHOL FREE event. Please, no
-					outside food or beverages.</u
+					>This is a family-friendly, TOBACCO & ALCOHOL FREE event.
+					Please, no outside food or beverages.</u
 				>
 			</p>
 		</div>
@@ -557,9 +559,7 @@
 							class="hub-btn square"
 						>
 							<strong>Square</strong> Checkout
-							<small
-								>All major cards accepted</small
-							>
+							<small>All major cards accepted</small>
 						</a>
 					</div>
 					<p class="final-note">
