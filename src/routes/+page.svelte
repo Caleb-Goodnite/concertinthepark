@@ -439,7 +439,7 @@
 				</div>
 				<div class="food-card">
 					<h3>Robotics</h3>
-					<p>Chips and Salsa</p>
+					<p>Chips and Salsa and Pulled Pork Sandwiches</p>
 				</div>
 				<div class="food-card">
 					<h3>BCAPA</h3>
@@ -447,7 +447,7 @@
 				</div>
 				<div class="food-card">
 					<h3>Science Olympiad</h3>
-					<p>Menu TBA</p>
+					<p>Popcorn</p>
 				</div>
 			</div>
 			<p class="food-note">
