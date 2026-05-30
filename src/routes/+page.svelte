@@ -2,9 +2,9 @@
 	const eventDetails = {
 		title: "Concert in the Park",
 		subtitle: "A Fine Arts Booster Club Community Event",
-		location: "Fischer Field Band Shell",
-		address: "720 W 1st St, Newton, Kansas, United States",
-		googleMaps: "https://maps.app.goo.gl/W5wp9x9Ed7xUV29i7", // Implemented Link, no longer example
+		location: "Newton High School Ravenscroft Gym",
+		address: "900 W 12th St, Newton, KS 67114",
+		googleMaps: "https://maps.app.goo.gl/8oQt2SEKVmAAh9aL8", // Implemented Link, no longer example
 		date: "Saturday, May 30",
 		time: "Gates 6:15 | Show 7:00 – 9:00 PM",
 		artists: [
@@ -326,6 +326,11 @@
 				>
 				<a href="#lineup" class="btn btn--secondary">See the Lineup</a>
 			</div>
+			<h2>
+				<strong><u>CONCERT HAS BEEN MOVED TO</u></strong><br />
+				<strong><u>RAVENSCROFT GYM AT NEWTON HIGH</u></strong><br />
+				<strong><u>SCHOOL</u></strong>
+			</h2>
 		</div>
 	</section>
 
@@ -449,6 +454,14 @@
 					<h3>Science Olympiad</h3>
 					<p>Popcorn</p>
 				</div>
+				<div class="food-card">
+					<h3>Orchestra</h3>
+					<p>Freeze Pops</p>
+				</div>
+				<div class="food-card">
+					<h3>Debate/Forensics</h3>
+					<p>Bake sale items</p>
+				</div>
 			</div>
 			<p class="food-note">
 				All food proceeds directly support these student organizations.
@@ -471,11 +484,12 @@
 					<p class="large-text">{eventDetails.location}</p>
 					<p>{eventDetails.address}</p>
 					<p class="venue__description">
-						Join us at the Fischer Field Band Shell. This open-air
+						Join us at Newton High School's Ravenscroft Gym. This
 						venue provides the perfect backdrop for an evening of
-						community and music. <strong
-							>Fischer Field is a family-friendly, tobacco-free
-							environment.</strong
+						community and music.
+						<strong
+							>Newton High School is a family-friendly,
+							tobacco-free environment.</strong
 						>
 					</p>
 					<a
@@ -521,13 +535,12 @@
 						</div>
 					</div>
 					<div class="ticket-footer">
-						<p>Fischer Field Band Shell | May 30</p>
+						<p>Ravenscroft Gym| May 30</p>
 						<div class="ticket-reminder">
 							<span>But don't forget...</span>
-							<strong
-								>Bring your own chair and/or blanket, or enjoy
-								nature's natural seat, the grass!</strong
+							<strong>Bring your own chair and/or blanket!</strong
 							>
+							<p>Indoor bleacher seating is TBD.</p>
 						</div>
 					</div>
 				</div>

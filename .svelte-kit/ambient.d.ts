@@ -67,6 +67,7 @@ declare module '$env/static/private' {
 	export const XPC_SERVICE_NAME: string;
 	export const npm_package_version: string;
 	export const pnpm_config_verify_deps_before_run: string;
+	export const ANTIGRAVITY_CLI_ALIAS: string;
 	export const VSCODE_INJECTION: string;
 	export const HOME: string;
 	export const SHLVL: string;
@@ -154,6 +155,7 @@ declare module '$env/dynamic/private' {
 		XPC_SERVICE_NAME: string;
 		npm_package_version: string;
 		pnpm_config_verify_deps_before_run: string;
+		ANTIGRAVITY_CLI_ALIAS: string;
 		VSCODE_INJECTION: string;
 		HOME: string;
 		SHLVL: string;
