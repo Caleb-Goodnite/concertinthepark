@@ -65,7 +65,7 @@
 		faqs: [
 			{
 				q: "What should I bring?",
-				a: "Please bring your own lawn chairs or blankets for seating. The event is held in a grass park area.",
+				a: "You may bring blankets for seating, however bringing your own chairs is not allowed. The event is held inside Ravenscroft Gym at Newton High School.",
 			},
 			{
 				q: "Is there food and drink?",
@@ -538,9 +538,13 @@
 						<p>Ravenscroft Gym| May 30</p>
 						<div class="ticket-reminder">
 							<span>But don't forget...</span>
-							<strong>Bring your own chair and/or blanket!</strong
+							<strong
+								>Lawn chairs are not allowed, but blankets are.</strong
 							>
-							<p>Indoor bleacher seating is TBD.</p>
+							<p>
+								Some bleachers will be provided for more
+								seating.
+							</p>
 						</div>
 					</div>
 				</div>
